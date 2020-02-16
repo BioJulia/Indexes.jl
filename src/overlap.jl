@@ -52,7 +52,8 @@ function done(iter::TabixOverlapIterator, state)
             c = icmp(state.record, iter.interval)
             if c == 0  # overlapping
                 return false
-            elseif c > 0
+            end
+            if c > 0
                 # no more overlapping records in this chunk
                 break
             end
@@ -69,18 +70,21 @@ end
 function Base.iterate(iter::TabixOverlapIterator, state)
     if done(iter, state)
         return nothing
-    else
-        return copy(state.record), state
     end
+
+    return copy(state.record), state
 end
 
 function icmp(record, interval)
     c = cmp(BioCore.seqname(record), interval.seqname)
+
     if c < 0 || (c == 0 && BioCore.rightposition(record) < interval.first)
         return -1
-    elseif c > 0 || (c == 0 && BioCore.leftposition(record) > interval.last)
-        return +1
-    else
-        return 0
     end
+
+    if c > 0 || (c == 0 && BioCore.leftposition(record) > interval.last)
+        return +1
+    end
+
+    return 0
 end
