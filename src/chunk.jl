@@ -25,5 +25,5 @@ function Base.isless(chunk1::Chunk, chunk2::Chunk)
 end
 
 function Base.seek(stream::BGZFStreams.BGZFStream, chunk::Chunk)
-    seek(stream, chunk.start)
+    return seek(stream, chunk.start)
 end
