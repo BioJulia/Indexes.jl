@@ -2,3 +2,18 @@ name = "Indexes"
 uuid = "4ffb77ac-cb80-11e8-1b35-4b78cc642f6d"
 authors = ["Kenta Sato <bicycle1885@gmail.com>", "Ben J. Ward <benjward@protonmail.com>", "Ciarán O’Mara <CiaranOMara@utas.edu.au>"]
 version = "0.1.0"
+
+[deps]
+BGZFStreams = "28d598bf-9b8f-59f1-b38c-5a06b4a0f5e6"
+BioCore = "37cfa864-2cd6-5c12-ad9e-b6597d696c81"
+BufferedStreams = "e1450e63-4bb3-523b-b2a4-4ffa8c0fd77d"
+GenomicFeatures = "899a7d2d-5c61-547b-bef9-6698a8d05446"
+
+[compat]
+GenomicFeatures = "2"
+
+[extras]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[targets]
+test = ["Test"]
