@@ -21,7 +21,16 @@ function Base.:(==)(chunk1::Chunk, chunk2::Chunk)
 end
 
 function Base.isless(chunk1::Chunk, chunk2::Chunk)
-    return (isless(chunk1.start, chunk2.start) || (chunk1.start == chunk2.start && isless(chunk1.stop, chunk2.stop)))
+
+    if isless(chunk1.start, chunk2.start)
+        return true
+    end
+
+    if chunk1.start == chunk2.start && isless(chunk1.stop, chunk2.stop)
+        return true
+    end
+    
+    return false
 end
 
 function Base.seek(stream::BGZFStreams.BGZFStream, chunk::Chunk)
