@@ -93,15 +93,17 @@ end
 function format2str(format)
     if format == 1
         return "SAM"
-    elseif format == 2
-        return "VCF"
-    else
-        if is_bed_rule(format)
-            return "generic (BED rule)"
-        else
-            return "generic"
-        end
     end
+
+    if format == 2
+        return "VCF"
+    end
+
+    if is_bed_rule(format)
+        return "generic (BED rule)"
+    end
+
+    return "generic"
 end
 
 # Read a Tabix object from `input_`.
