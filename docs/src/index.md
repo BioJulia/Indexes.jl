@@ -1,4 +1,4 @@
-# <img src="./docs/src/assets/logo.svg" width="30%" align="right" /> Indexes.jl
+# Indexes.jl
 
 [![Project Status: WIP – Initial development is in progress, but there has not yet been a stable, usable release suitable for the public.](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostatus.org/#wip)
 [![Latest Release](https://img.shields.io/github/release/BioJulia/Indexes.jl.svg)](https://github.com/BioJulia/Indexes.jl/releases/latest)
@@ -7,8 +7,7 @@
 [![Latest documentation](https://img.shields.io/badge/docs-dev-blue.svg)](https://biojulia.github.io/Indexes.jl/dev/)
 [![Join the chat at https://gitter.im/BioJulia/Indexes.jl](https://badges.gitter.im/BioJulia/Indexes.jl.svg)](https://gitter.im/BioJulia/Indexes.jl?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-> This project follows the [semver](http://semver.org) pro forma and uses the [git-flow branching model](https://nvie.com/posts/a-successful-git-branching-model/ "original
-blog post").
+> This project follows the [semver](http://semver.org) pro forma and uses the [git-flow branching model](https://nvie.com/posts/a-successful-git-branching-model/).
 
 ## Description
 Handles indexes required to iterate through various IO streams.
@@ -33,16 +32,6 @@ add Indexes
 ```
 
 If you are interested in the cutting edge of the development, please check out the [develop branch](https://github.com/BioJulia/Indexes.jl/tree/develop) to try new features before release.
-
-
-## Testing
-Indexes is tested against Julia `1.X` on Linux, OS X, and Windows.
-
-**Latest build status:**
-
-[![Build Status](https://travis-ci.org/BioJulia/Indexes.jl.svg?branch=master)](https://travis-ci.org/BioJulia/Indexes.jl)
-[![Build status](https://ci.appveyor.com/api/projects/status/jny2ep4u3cmly8pj/branch/master?svg=true)](https://ci.appveyor.com/project/BioJulia/Indexes-jl/branch/master)
-[![codecov](https://codecov.io/gh/BioJulia/Indexes.jl/branch/master/graph/badge.svg)](https://codecov.io/gh/BioJulia/Indexes.jl)
 
 ## Contributing
 We appreciate [contributions](https://github.com/BioJulia/Indexes.jl/graphs/contributors) from users including reporting bugs, fixing issues, improving performance and adding new features.
