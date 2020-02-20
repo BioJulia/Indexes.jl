@@ -10,7 +10,11 @@ BufferedStreams = "e1450e63-4bb3-523b-b2a4-4ffa8c0fd77d"
 GenomicFeatures = "899a7d2d-5c61-547b-bef9-6698a8d05446"
 
 [compat]
+BGZFStreams = "0.3"
+BioCore = "2"
+BufferedStreams = "1"
 GenomicFeatures = "2"
+julia = "1.1"
 
 [extras]
 Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
