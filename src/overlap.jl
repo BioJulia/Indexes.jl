@@ -25,7 +25,7 @@ function Base.iterate(iter::TabixOverlapIterator)
     @assert iter.reader.index !== nothing
     # TODO: Use a method that resets the reading position.
     buffer = BioGenerics.IO.stream(iter.reader)
-    iter.reader.state = BioGenerics.Ragel.State(1, BufferedStreams.BufferedInputStream(buffer.source))
+    iter.reader.state = BioGenerics.Automa.State(TranscodingStreams.NoopStream(buffer.stream), 1, 1, false)
     state = TabixOverlapIteratorState(Indexes.overlapchunks(iter.reader.index, iter.interval), 0, false, eltype(iter)())
 
     return iterate(iter, state)
@@ -33,7 +33,7 @@ end
 
 function done(iter::TabixOverlapIterator, state)
     buffer = BioGenerics.IO.stream(iter.reader)
-    source = buffer.source
+    source = buffer.stream
     if state.chunkid == 0
         if isempty(state.chunks)
             return true
