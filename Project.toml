@@ -1,7 +1,7 @@
 name = "Indexes"
 uuid = "4ffb77ac-cb80-11e8-1b35-4b78cc642f6d"
 authors = ["Kenta Sato <bicycle1885@gmail.com>", "Ben J. Ward <benjward@protonmail.com>", "Ciarán O’Mara <CiaranOMara@utas.edu.au>"]
-version = "0.1.0"
+version = "0.1.1"
 
 [deps]
 BGZFStreams = "28d598bf-9b8f-59f1-b38c-5a06b4a0f5e6"
