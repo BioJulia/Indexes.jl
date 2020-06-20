@@ -17,17 +17,11 @@ For example:
 - An index type for BGZFStream.
 
 ## Installation
-`Indexes` is bundled into packages like [BED](https://github.com/BioJulia/BED.jl), [GFF3](https://github.com/BioJulia/GFF3.jl), and [XAM](https://github.com/BioJulia/XAM.jl) to assist them with IO streams, so you may not need to install this package explicitly.
-However, if you do, `Indexes` is made available to install through BioJulia's package registry.
-By default, Julia's package manager only uses the "General" package registry.
-Your Julia configuration needs to include the BioJulia registry to be able to install the latest version of `Indexes`.
+The Indexes package is bundled into packages like [BED](https://github.com/BioJulia/BED.jl), [GFF3](https://github.com/BioJulia/GFF3.jl), and [XAM](https://github.com/BioJulia/XAM.jl) to assist them with IO streams, so you may not need to install this package explicitly.
+However, if you do, Indexes is made available to install through the [https://github.com/juliaregistries/General](General package registry).
 
-To add the BioJulia registry from the [Julia REPL](https://docs.julialang.org/en/v1/manual/getting-started/), press `]` to enter [pkg mode](https://docs.julialang.org/en/v1/stdlib/Pkg/), then enter the following command:
-```julia
-registry add https://github.com/BioJulia/BioJuliaRegistry.git
-```
-
-After adding the registry to your configuration, you can install `Indexes` while in [pkg mode](https://docs.julialang.org/en/v1/stdlib/Pkg/) with the following:
+You can install Indexes from the [Julia REPL](https://docs.julialang.org/en/v1/manual/getting-started/).
+Press `]` to enter [pkg mode](https://docs.julialang.org/en/v1/stdlib/Pkg/), then enter the following command:
 ```julia
 add Indexes
 ```
