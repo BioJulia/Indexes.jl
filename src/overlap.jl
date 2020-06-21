@@ -76,13 +76,13 @@ function Base.iterate(iter::TabixOverlapIterator, state)
 end
 
 function icmp(record, interval)
-    c = cmp(BioCore.seqname(record), interval.seqname)
+    c = cmp(BioCore.seqname(record), BioCore.seqname(interval))
 
-    if c < 0 || (c == 0 && BioCore.rightposition(record) < interval.first)
+    if c < 0 || (c == 0 && BioCore.rightposition(record) < BioCore.leftposition(interval))
         return -1
     end
 
-    if c > 0 || (c == 0 && BioCore.leftposition(record) > interval.last)
+    if c > 0 || (c == 0 && BioCore.leftposition(record) > BioCore.rightposition(interval))
         return +1
     end
 
