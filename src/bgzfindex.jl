@@ -1,7 +1,7 @@
 # BGZF Index
 # ==========
 #
-# An index type for BGZFStream.
+# An index type for CodecBGZF.
 #
 # The details of the internal is specified in
 # https://samtools.github.io/hts-specs/SAMv1.pdf.
@@ -13,7 +13,7 @@
 const BinIndex = Dict{UInt32,Vector{Chunk}}
 
 # linear index
-const LinearIndex = Vector{BGZFStreams.VirtualOffset}
+const LinearIndex = Vector{CodecBGZF.VirtualOffset}
 
 # Metadata providing a summary of the number of mappend/unmapped reads.
 struct PseudoBin
@@ -27,7 +27,7 @@ struct PseudoBin
     n_unmapped::Int64
 end
 
-# Index for BGZFStream; used in BAI and Tabix index.
+# Index for CodecBGZF; used in BAI and Tabix index.
 struct BGZFIndex
     # indexes of contigs (chromosomes)
     data::Vector{Tuple{BinIndex,LinearIndex,Union{PseudoBin, Nothing}}}
