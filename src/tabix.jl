@@ -108,7 +108,7 @@ end
 
 # Read a Tabix object from `input_`.
 function read_tabix(input_::IO)
-    input = BGZFStreams.BGZFStream(input_)
+    input = CodecBGZF.BGZFDecompressorStream(input_)
 
     # check magic bytes
     T = read(input, UInt8)

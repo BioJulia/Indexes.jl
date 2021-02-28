@@ -10,7 +10,7 @@ module Indexes
 
 using TranscodingStreams
 
-import BGZFStreams
+import CodecBGZF
 import BioGenerics
 import GenomicFeatures: Interval
 

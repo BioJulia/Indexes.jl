@@ -4,13 +4,12 @@ authors = ["Kenta Sato <bicycle1885@gmail.com>", "Ben J. Ward <benjward@protonma
 version = "0.1.4"
 
 [deps]
-BGZFStreams = "28d598bf-9b8f-59f1-b38c-5a06b4a0f5e6"
 BioGenerics = "47718e42-2ac5-11e9-14af-e5595289c2ea"
+CodecBGZF = "d9d91ef6-315d-495b-8131-db2ca24339d6"
 GenomicFeatures = "899a7d2d-5c61-547b-bef9-6698a8d05446"
 TranscodingStreams = "3bb67fe8-82b1-5028-8e26-92a6c54297fa"
 
 [compat]
-BGZFStreams = "0.3"
 BioGenerics = "0.1"
 GenomicFeatures = "2"
 TranscodingStreams = "0.9.5"

@@ -8,11 +8,11 @@
 
 # BGZF file chunk [.start, .stop).
 struct Chunk
-    start::BGZFStreams.VirtualOffset
-    stop::BGZFStreams.VirtualOffset
+    start::CodecBGZF.VirtualOffset
+    stop::CodecBGZF.VirtualOffset
 end
 
-function Base.in(voffset::BGZFStreams.VirtualOffset, chunk::Chunk)
+function Base.in(voffset::CodecBGZF.VirtualOffset, chunk::Chunk)
     return chunk.start ≤ voffset < chunk.stop
 end
 
@@ -33,6 +33,6 @@ function Base.isless(chunk1::Chunk, chunk2::Chunk)
     return false
 end
 
-function Base.seek(stream::BGZFStreams.BGZFStream, chunk::Chunk)
+function Base.seek(stream::CodecBGZF.BGZFDecompressorStream, chunk::Chunk)
     return seek(stream, chunk.start)
 end
