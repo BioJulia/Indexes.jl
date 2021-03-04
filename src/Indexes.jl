@@ -9,7 +9,7 @@
 module Indexes
 
 import BGZFStreams
-import BioCore
+import BioGenerics
 import BufferedStreams
 import GenomicFeatures: Interval
 
