@@ -77,11 +77,11 @@ Return chunks possibly overlapping with the range specified by `interval`.
 Note that records within the returned chunks are not guaranteed to actually overlap the query interval.
 """
 function overlapchunks(tabix::Tabix, interval::Interval)
-    seqid = findfirst(isequal(interval.seqname), tabix.names)
+    seqid = findfirst(isequal(BioCore.seqname(interval)), tabix.names)
     if seqid == 0
-        throw(ArgumentError("failed to find sequence name '$(interval.seqname)'"))
+        throw(ArgumentError("failed to find sequence name '$(BioCore.seqname(interval))'"))
     end
-    return overlapchunks(tabix.index, seqid, interval.first:interval.last)
+    return overlapchunks(tabix.index, seqid, BioCore.leftposition(interval):BioCore.rightposition(interval))
 end
 
 # Check if `format` follows the BED rule (half-closed-half-open and 0-based).
