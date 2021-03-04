@@ -8,9 +8,10 @@
 
 module Indexes
 
+using TranscodingStreams
+
 import BGZFStreams
 import BioGenerics
-import BufferedStreams
 import GenomicFeatures: Interval
 
 include("chunk.jl")
