@@ -8,10 +8,8 @@
 
 module Indexes
 
-using TranscodingStreams
-
-import BGZFStreams
-import BioGenerics
+import CodecBGZF
+import BioCore
 import GenomicFeatures: Interval
 
 function Base.bytesavailable(stream::BGZFStreams.BGZFStream{IOStream})
