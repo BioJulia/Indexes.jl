@@ -3,7 +3,7 @@
 
 struct TabixOverlapIterator{T}
     reader::T
-    interval::Interval
+    interval::GenomicInterval
 end
 
 function Base.eltype(::Type{TabixOverlapIterator{T}}) where T
