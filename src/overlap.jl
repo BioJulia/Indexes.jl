@@ -47,7 +47,7 @@ function done(iter::TabixOverlapIterator, state)
         The `virtualoffset(source)` is not synchronized with the current reading position because data are buffered in `buffer` for parsing text.
         So we need to check not only `virtualoffset` but also `nb_available`, which returns the current buffered data size.
         =#
-        while bytesavailable(buffer) > 0 || CodecBGZF.virtualoffset(source) < chunk.stop
+        while bytesavailable(buffer) > 0 || CodecBGZF.VirtualOffset(source) < chunk.stop
             read!(iter.reader, state.record)
             c = icmp(state.record, iter.interval)
             if c == 0  # overlapping
