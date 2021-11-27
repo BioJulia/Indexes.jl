@@ -34,8 +34,8 @@ Indexes is tested against Julia `1.X` on Linux, OS X, and Windows.
 
 **Latest build status:**
 
-[![Unit tests](https://github.com/BioJulia/indexes.jl/workflows/Unit%20tests/badge.svg?branch=master)](https://github.com/BioJulia/indexes.jl/actions?query=workflow%3A%22Unit+tests%22+branch%3Amaster)
-[![Documentation](https://github.com/BioJulia/indexes.jl/workflows/Documentation/badge.svg?branch=master)](https://github.com/BioJulia/indexes.jl/actions?query=workflow%3ADocumentation+branch%3Amaster)
+[![Unit Tests](https://github.com/BioJulia/Indexes.jl/actions/workflows/UnitTests.yml/badge.svg)](https://github.com/BioJulia/Indexes.jl/actions/workflows/UnitTests.yml)
+[![Build Documentation](https://github.com/BioJulia/Indexes.jl/actions/workflows/Documentation.yml/badge.svg)](https://github.com/BioJulia/Indexes.jl/actions/workflows/Documentation.yml)
 [![codecov](https://codecov.io/gh/BioJulia/Indexes.jl/branch/master/graph/badge.svg)](https://codecov.io/gh/BioJulia/Indexes.jl)
 
 ## Contributing
