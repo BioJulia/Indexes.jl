@@ -76,7 +76,7 @@ function Base.iterate(iter::TabixOverlapIterator, state)
 end
 
 function icmp(record, interval)
-    c = cmp(BioGenerics.seqname(record), BioGenerics.seqname(interval))
+    c = cmp(BioGenerics.groupname(record), BioGenerics.groupname(interval))
 
     if c < 0 || (c == 0 && BioGenerics.rightposition(record) < BioGenerics.leftposition(interval))
         return -1
