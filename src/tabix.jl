@@ -70,13 +70,13 @@ end
 
 
 """
-    overlapchunks(tabix::Tabix, interval::Interval)
+    overlapchunks(tabix::Tabix, interval::GenomicInterval)
 
 Return chunks possibly overlapping with the range specified by `interval`.
 
 Note that records within the returned chunks are not guaranteed to actually overlap the query interval.
 """
-function overlapchunks(tabix::Tabix, interval::Interval)
+function overlapchunks(tabix::Tabix, interval::GenomicInterval)
     seqid = findfirst(isequal(BioGenerics.seqname(interval)), tabix.names)
     if seqid == 0
         throw(ArgumentError("failed to find sequence name '$(BioGenerics.seqname(interval))'"))
