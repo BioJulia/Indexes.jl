@@ -77,9 +77,9 @@ Return chunks possibly overlapping with the range specified by `interval`.
 Note that records within the returned chunks are not guaranteed to actually overlap the query interval.
 """
 function overlapchunks(tabix::Tabix, interval::GenomicInterval)
-    seqid = findfirst(isequal(BioGenerics.seqname(interval)), tabix.names)
+    seqid = findfirst(isequal(BioGenerics.groupname(interval)), tabix.names)
     if seqid == 0
-        throw(ArgumentError("failed to find sequence name '$(BioGenerics.seqname(interval))'"))
+        throw(ArgumentError("failed to find sequence name '$(BioGenerics.groupname(interval))'"))
     end
     return overlapchunks(tabix.index, seqid, BioGenerics.leftposition(interval):BioGenerics.rightposition(interval))
 end
