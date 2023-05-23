@@ -12,7 +12,7 @@ using TranscodingStreams
 
 import CodecBGZF
 import BioGenerics
-import GenomicFeatures: Interval
+import GenomicFeatures: GenomicInterval
 
 include("chunk.jl")
 include("bgzfindex.jl")
