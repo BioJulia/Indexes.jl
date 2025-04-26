@@ -10,7 +10,7 @@ GenomicFeatures = "899a7d2d-5c61-547b-bef9-6698a8d05446"
 TranscodingStreams = "3bb67fe8-82b1-5028-8e26-92a6c54297fa"
 
 [compat]
-BGZFStreams = "0.3"
+BGZFStreams = "0.3.2"
 BioGenerics = "0.1"
 GenomicFeatures = "3"
 TranscodingStreams = "0.9.5, 0.10, 0.11"
