@@ -40,9 +40,9 @@ jobs:
         with:
           version: ${{ matrix.julia-version }}
       - name: Cache
-      - uses: julia-actions/cache@v2
+        uses: julia-actions/cache@v2
       - name: Build
-      - uses: julia-actions/julia-buildpkg@v1
+        uses: julia-actions/julia-buildpkg@v1
       - name: Run Tests
         uses: julia-actions/julia-runtest@v1
       - name: Create CodeCov
