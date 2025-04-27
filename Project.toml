@@ -12,7 +12,7 @@ TranscodingStreams = "3bb67fe8-82b1-5028-8e26-92a6c54297fa"
 [compat]
 BGZFStreams = "0.3"
 BioGenerics = "0.1"
-GenomicFeatures = "2"
+GenomicFeatures = "2, 3"
 TranscodingStreams = "0.9.5"
 julia = "1"
 
