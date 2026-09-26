@@ -12,7 +12,7 @@ using TranscodingStreams
 
 import BGZFStreams
 import BioGenerics
-import GenomicFeatures: Interval
+import GenomicFeatures: GenomicInterval
 
 function Base.bytesavailable(stream::BGZFStreams.BGZFStream{IOStream})
 
